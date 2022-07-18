@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="typeDvariable.js"></script>
+    <title>Document</title>
+
+    <style>
+       .ourContainer {
+        width: 220px;
+        position: absolute;
+        left: 50%;
+       transform: translate(-50%);
+       /*top: 50%;*/
+       border: 3px solid blue;
+        border-radius: 10%;
+       }
+     
+    </style>
+</head>
+<body>
+    <div class="ourContainer">
+        <div class="x">angle x : <span class="xx">0</span></div>
+        <div class="y">angle y : <span class="yy">0</span></div>
+    </div>
+    
+   <script>
+        const ourContainer=document.querySelector(".ourContainer");
+        let xx =document.querySelector(".xx");
+        let yy = document.querySelector(".yy");
+
+        ourContainer.addEventListener('mousemove',(e)=>{
+         yy.innerHTML=e.y;   
+        xx.innerHTML=e.x;
+
+        ourContainer.style.left=e.x/window.innerWidth *100 + "%"
+       // ourContainer.style.top=e.y/window.innerHeight * 100 + "%"
+               if (e.x >500) {
+           document.body.style.filter="blur(1px)";
+        }else {
+            document.body.style.filter="none";
+        }
+        })
+
+        
+    </script>
+</body> 
+
+</html>
