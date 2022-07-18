@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="typeDvariable.js"></script>
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .night {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="button"> On</button>
+    
+    <script>
+        const buttElemt=document.getElementById("button");
+        const body =document.body;
+
+        buttElemt.addEventListener('click', () => {
+            const oldText = buttElemt.innerHTML;
+            nightFunct()
+            return button.innerText = oldText === "ON" ? "OFF" :"ON"
+        })
+
+         function nightFunct() {
+        
+           const a =body.classList.toggle("night")
+           
+        return a;
+         }
+
+      
+    </script>
+</body>
+</html>
