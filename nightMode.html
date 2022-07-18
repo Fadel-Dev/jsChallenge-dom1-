@@ -11,6 +11,9 @@
         body {
             background-color: white;
         }
+        .hide {
+            visibility: hidden;
+        }
 
         .night {
             background-color: black;
@@ -18,21 +21,24 @@
     </style>
 </head>
 <body>
-    <button id="button"> On</button>
+    <img id="img" src="assets/Image_3.png" alt="">
+    <button id="button"> Show</button>
     
     <script>
         const buttElemt=document.getElementById("button");
         const body =document.body;
+        const img = document.getElementById("img")
 
         buttElemt.addEventListener('click', () => {
             const oldText = buttElemt.innerHTML;
             nightFunct()
-            return button.innerText = oldText === "ON" ? "OFF" :"ON"
+            return button.innerText = oldText === "SHOW" ? "HIDE" :"SHOW"
         })
 
          function nightFunct() {
         
-           const a =body.classList.toggle("night")
+          // const a =body.classList.toggle("night")
+          const a =img.classList.toggle("hide");
            
         return a;
          }
