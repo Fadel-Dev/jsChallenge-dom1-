@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,30 +15,41 @@
 
         .night {
             background-color: black;
+            color: whitesmoke;
         }
+
     </style>
 </head>
+
 <body>
-    <button id="button"> On</button>
-    
+
+    <button style="position:absolute;right: 0;" id="button"> jour</button>
+    <h1>Documentation sur cheich anta diop</h1>
+    <p>
+        Cheikh anta diop est un savat africain ne le xx-xx-xxx
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quos dolore tenetur, saepe, neque sed consequatur
+        magni laudantium sapiente aut error sint esse et totam delectus ab dolor. Odio atque hic natus.
+    </p>
+
     <script>
-        const buttElemt=document.getElementById("button");
-        const body =document.body;
+        const buttElemt = document.getElementById("button");
+        const body = document.body;
 
         buttElemt.addEventListener('click', () => {
             const oldText = buttElemt.innerHTML;
             nightFunct()
-            return button.innerText = oldText === "ON" ? "OFF" :"ON"
+            return button.innerText = oldText === "jour" ? "nuit" : "jour"
         })
 
-         function nightFunct() {
-        
-           const a =body.classList.toggle("night")
-           
-        return a;
-         }
+        function nightFunct() {
 
-      
+            const a = body.classList.toggle("night")
+
+            return a;
+        }
+
+
     </script>
 </body>
+
 </html>
