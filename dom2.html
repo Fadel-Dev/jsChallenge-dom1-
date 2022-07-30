@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mainContainer {
+        margin: auto;
+        background-color: red;
+        width: 500px;
+        height: 300px;
+    }
+    .rond{
+        width: 40px;
+        height:40px;
+        border-radius: 100%;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+   backdrop-filter: blur(5px);
+    }
+</style>
+<body>
+    <div class="mainContainer">
+        <div class="rond">
+
+        </div>
+    </div>
+    <script>
+        let rond = document.querySelector(".rond");
+        window.addEventListener("mousemove",(e)=>{
+            //console.log(e);
+            rond.style.left = e.pageX + "px";
+
+            rond.style.top = e.pageY + "px";
+
+        });
+        //AGRANDISSEMENT
+        window.addEventListener("mousedown",(e)=>{
+            rond.style.border="2px solid grey"
+            rond.style.background="#ffffff9c";
+        });
+
+        window.addEventListener("mouseup",(e)=>{
+            rond.style.border="none"
+
+            rond.style.background="#FFFFFF";
+        });
+    </script>
+</body>
+</html>
