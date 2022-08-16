@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+     
+    function Categorie(nom,prenom,age){
+//let name,prenom;
+//let age;
+
+if (age < 18) {
+    console.log("uou are a young");
+}else {
+    console.log("you are a adult")
+}
+
+return console.log(nom +"_"+ prenom +"_" + age)
+
+    }
+
+    let name= prompt("Veuillez votre name");
+    let prenom= prompt("Veuillez votre prenom");
+    let age= prompt("votre age");
+    Categorie(prenom,name,age)
+   </script>
+</body>
+</html>

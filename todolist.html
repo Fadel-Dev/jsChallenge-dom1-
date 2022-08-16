@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tache;
+        let envoyer;
+        let groupeUl;
+    </script>
+    <h1>Here is our todoList</h1>
+
+    <form action="#" method="get">
+        <input type="text" id="tache" placeholder="Ajoutez une tache">
+        <input type="submit" id="envoyer" value="Ajoutez">
+    </form>
+
+    <ul id="groupeUl">
+        
+    </ul>
+
+    <script>
+
+let tabNode=[];
+monStockage = localStorage;
+        //tabNode.push("fadel");
+
+
+        tache=document.getElementById("tache");
+        envoyer=document.getElementById("envoyer");
+        groupeUl=document.getElementById("groupeUl");
+
+        document.addEventListener("submit", function(e){
+            e.preventDefault;
+          console.log(tache.value); 
+          let newTache=tache.value;
+// Create an "li" node:
+          let newLi= document.createElement("li");
+// Create a text node:
+          let txtNodeLi=document.createTextNode(newTache);
+            //tabNode.push(newTache)
+// Append the text node to the "li" node:
+          newLi.appendChild(txtNodeLi);
+// Append the "li" node to the list:
+            groupeUl.appendChild(newLi);
+          //  console.log(tabNode);
+
+        });
+          let name= "fadel";
+        saveTache(name);
+
+        console.log(saveTache(tache.value));
+
+
+       function saveTache(ta){
+let taches=JSON.parse(localStorage.getItem("taches")) ||[];
+        taches= [...taches,ta];
+        localStorage.setItem("taches",JSON.stringify(taches));
+       }
+    </script>
+</body>
+</html>

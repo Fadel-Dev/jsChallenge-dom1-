@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>***********MENU************</h1>
+    <ul class="choix">
+        <li>1_ addition</li>
+        <li>2_ soustraction</li>
+        <li>3_ multiplication</li>
+        <li>4_ division entiere</li>
+        <li>5- division reel</li>
+        <li>6- Modulo</li>
+        <li>7_ quit</li>
+    </ul>
+    <script>
+       // let choice = document.getElementsByClassName("choix");
+        //console.log(choice[2]);
+
+        let difference,division, dEntiere,dReel,modulo,quit;
+        let choix=0;
+        let  x=0;
+       let  y=0;
+
+       
+        choix=prompt("veuillez choisir de 1 a 7");
+         x=prompt("veuillex entrez le premier nombre");
+         y=prompt("veuillez entrez le deuxieme nombre");
+       let somme=parseInt(x)+parseInt(y);
+       let produit =parseInt(x)+parseInt(y);
+
+
+                if(choix==1)
+                {   
+                    //addition
+                   console.log("vous avez choisit l addition")
+                    //somme= x+y;
+                    console.log(somme);
+                }else if(choix==2) {
+                    //soustraction
+                    difference = x-y;
+                }
+                 
+             /*   case 2:
+                    
+                    break;
+                case 3:
+                    //multiplication
+                    produit=x*y;
+                    break;
+                case 4:
+                    //division entiere
+                    dEntiere=x/y
+                    break;
+                case 5:
+                    dReel=x/y;
+                    break;
+                case 6:
+                    //modulo
+                    modulo=x/y;
+                    break;
+                 case 7:
+                    console.log("cool");
+                    break;
+                default:
+                    console.log("first")
+                    break;
+            }
+        */
+        
+  /*      function Calculatrice(x,y,choix) {
+
+            switch (choix) {
+                case 1:
+                    //addition
+                   console.log("vous avez choisit l addition")
+                    somme= x+y;
+                    console.log("first")
+                    break;
+                case 2:
+                    //soustraction
+                    difference = x-y;
+                case 3:
+                    //multiplication
+                    produit=x*y;
+                    break;
+                case 4:
+                    //division entiere
+                    dEntiere=x/y
+                    break;
+                case 5:
+                    dReel=x/y;
+                    break;
+                case 6:
+                    //modulo
+                    modulo=x/y;
+                    break;
+                 case 7:
+                default:
+                    break;
+            }
+            return somme;
+        }
+Calculatrice(x,y,choix);*/
+      
+    </script>    
+</body>
+</html>

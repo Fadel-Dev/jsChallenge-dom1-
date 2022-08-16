@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>quizz (version1 alert)</h1>
+    <h3>myscore</h3>
+
+</body>
+
+<script>
+    let myScore=document.querySelector("h3");
+    let score=0;
+    const questions = [{
+        question0:"quel est le pretirit de to be \n want \n been \nwas",
+        reponse0:"3"
+    },
+    {
+        question1:"quel est le pretirit de to have \n hade \n haven \haved",
+        reponse1:"2"
+    }
+];
+
+    quizz0();
+    quizz1();
+/*QUESTION 1*/
+function quizz0() {
+let userReponse0=prompt(questions[0].question0);
+    if(userReponse0==3){
+        score++;
+        console.log("Bravo "+ score);
+        myScore.innerHTML="Score "+ score;
+    }
+    return userReponse0;
+}
+   
+    /*QUESTION 2*/
+function quizz1() {
+    let userReponse1=prompt(questions[1].question1);
+    if(userReponse1==1){
+        score++;
+        console.log("Bravo "+ score);
+        myScore.innerHTML="Score "+ score;
+    }
+    return userReponse1
+}
+
+
+
+
+</script>
+</html>

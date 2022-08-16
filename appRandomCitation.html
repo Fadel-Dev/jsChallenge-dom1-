@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: url("https://picsum.photos/200/300");
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+           
+        }
+
+        #citation {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% ,-50%);
+            transition: 5s;
+            color: whitesmoke;
+            background-color: rgb(36, 36, 36);
+            padding: 40px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Bienvenu dans votre espace de citation</h1>
+    <div id="citation">
+        exemple de citation
+    </div>
+
+    <script>
+let rand=document.getElementById("citation")
+let body =document.body;
+let img;
+
+        const recupCitation= ()=>{
+            fetch('https://api.quotable.io/random')
+            .then((res)=>res.json())
+            .then((data)=> rand.innerHTML=data.content)
+        }   
+
+        const recupImg=()=> {
+            fetch('https://picsum.photos/200/300')
+            .then((res)=> {
+                document.getElementById("body").innerHTML=`
+                <img src=${res.url}/>`
+            })
+        };
+      
+        recupCitation();  
+        /*recupImg();     
+
+           rand.addEventListener("click",(e)=> {
+           recupCitation();
+           recupImg();
+            })*/
+
+       
+    </script>
+</body>
+</html>
